@@ -41,4 +41,15 @@ dependencies {
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:2.6.2"
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'//converter json
+
+    // ViewModel and LiveData
+    def lifecycle_version = "2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //recyclerview
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+
 }
