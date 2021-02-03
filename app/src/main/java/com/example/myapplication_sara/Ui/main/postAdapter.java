@@ -1,5 +1,7 @@
 package com.example.myapplication_sara.Ui.main;
 
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -7,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication_sara.Model.PostModel;
@@ -32,7 +35,13 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.PostViewHolder
         holder.userTV.setText(postList.get(position).getUserId()+"");
         holder.bodyTV.setText(postList.get(position).getBody());
 
-    }
+            if (position%3==0){
+                Log.i("value", String.valueOf(position));
+                holder.ImageIMG.setVisibility(View.VISIBLE);
+                holder.ImageIMG.setImageResource(R.drawable.ic_launcher_background);
+        }else {
+                holder.ImageIMG.setVisibility(View.INVISIBLE);
+            }}
 
     @Override
     public int getItemCount() {
@@ -47,11 +56,13 @@ public class postAdapter extends RecyclerView.Adapter<postAdapter.PostViewHolder
 
     public class PostViewHolder extends RecyclerView.ViewHolder {
         TextView titleTV, userTV, bodyTV;
+        ImageView ImageIMG;
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
             titleTV = itemView.findViewById(R.id.title_tv);
             userTV = itemView.findViewById(R.id.userId_tv);
             bodyTV = itemView.findViewById(R.id.body_tv);
+            ImageIMG=itemView.findViewById(R.id.Image);
         }
     }
 

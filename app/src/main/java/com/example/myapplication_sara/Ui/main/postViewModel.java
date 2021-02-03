@@ -14,6 +14,7 @@ import retrofit2.Response;
 import com.example.myapplication_sara.data.retrofitClient;
 
 public class postViewModel extends ViewModel {
+
     MutableLiveData<List<PostModel>> postsMutableLiveData = new MutableLiveData<>();
     MutableLiveData<String> posts = new MutableLiveData<>();
 
@@ -22,12 +23,14 @@ public class postViewModel extends ViewModel {
             @Override
             public void onResponse(Call<List<PostModel>> call, Response<List<PostModel>> response) {
                 postsMutableLiveData.setValue(response.body());
+
             }
 
             @Override
             public void onFailure(Call<List<PostModel>> call, Throwable t) {
-                posts.setValue("errr");
+                posts.setValue("error");
             }
         });
+
     }
 }

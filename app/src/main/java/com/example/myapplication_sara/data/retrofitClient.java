@@ -14,8 +14,10 @@ public class retrofitClient  {
     private static retrofitClient INSTANCE;
 
     public retrofitClient() {
+        //building retrofit
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
+                //convert to json
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         postInterface = retrofit.create(PostInterface.class);
