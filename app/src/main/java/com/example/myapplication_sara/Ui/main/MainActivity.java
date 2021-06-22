@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Activity name
+        //curent Activity
+        //learn git
         final String TAG = MainActivity.class.getSimpleName();
         Log.d("ActivityName", TAG );
 
