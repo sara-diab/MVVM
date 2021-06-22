@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         //curent Activity
         //learn git
         final String TAG = MainActivity.class.getSimpleName();
-        Log.d("ActivityName", TAG );
+        Log.d("ActivityCurrant", TAG );
 
         //نلاحظ أننا نستخدم في الإنشاء ViewModelProviders, وهي ستقوم بحفظ وتخزين ViewModel ل activity  المعطى
         // بمعنى, في حال حدثت حالة configChanges -كتغير orientation- ل activity
